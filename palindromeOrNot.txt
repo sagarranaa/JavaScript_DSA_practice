@@ -1,0 +1,14 @@
+function checkP(string) {
+    //convert string to array
+    const arr = string.split(' ');
+    //reverse the array
+    const reverse = arr.reverse();
+    //convert array to string
+    const reverstring = reverse.join(' ');
+    if (string == reverstring) {
+        return false;
+    } else {
+        return true;
+    }
+}
+console.log(checkP("abc"))
