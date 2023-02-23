@@ -1,0 +1,27 @@
+//creating function here
+function checkPermutation(str1, str2) {
+    // check if the lengths of the strings are equal
+    if (str1.length !== str2.length) {
+        return false;
+    }
+
+    // create frequency counters for each string
+    const freq1 = {};
+    const freq2 = {};
+    for (let i = 0; i < str1.length; i++) {
+        freq1[str1[i]] = (freq1[str1[i]] || 0) + 1;
+        freq2[str2[i]] = (freq2[str2[i]] || 0) + 1;
+    }
+
+    // compare the frequency counters
+    for (let char in freq1) {
+        if (freq1[char] !== freq2[char]) {
+            return false;
+        }
+    }
+
+    return true;
+}
+    var x = String(readLine())
+    var y = String(readLine)
+    console.log(checkPermutation(x,y))
